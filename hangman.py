@@ -114,7 +114,7 @@ def play_hangman():
     wrong_guesses = set()
 
     print("Welcome to Hangman!")
-    print(game_state)
+    print("Word:", game_state)
 
     while True:
         guess = get_guess()
