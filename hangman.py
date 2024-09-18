@@ -33,7 +33,77 @@ def check_win(game_state, word):
 
 def check_lose(wrong_guesses):
     """Checks if the game has been lost."""
-    return len(wrong_guesses) >= 6
+    return len(wrong_guesses) >= 7
+
+def draw_hangman(wrong_guesses):
+    """Draws the hangman based on incorrect guesses."""
+    hangman_stages = [
+        """
+          |
+          |
+          |
+          |
+          |
+        """,
+        """
+        -----
+        |   |
+            |
+            |
+            |
+            |
+        """,
+        """
+        -----
+        |   |
+        O   |
+            |
+            |
+            |
+        """,
+        """
+        -----
+        |   |
+        O   |
+        |   |
+            |
+            |
+        """,
+        """
+        -----
+        |   |
+        O   |
+       /|   |
+            |
+            |
+        """,
+        """
+        -----
+        |   |
+        O   |
+       /|\  |
+            |
+            |
+        """,
+        """
+        -----
+        |   |
+        O   |
+       /|\  |
+       /    |
+            |
+        """,
+        """
+        -----
+        |   |
+        O   |
+       /|\  |
+       / \  |
+            |
+        """
+    ]
+
+    return hangman_stages[len(wrong_guesses)]
 
 def play_hangman():
     """Main game loop."""
@@ -59,7 +129,8 @@ def play_hangman():
                 break
         else:
             wrong_guesses.add(guess)
-            print("Wrong guess. You have", 6 - len(wrong_guesses), "tries left.")
+            print("Wrong guess. You have", 7 - len(wrong_guesses), "tries left.")
+            print(draw_hangman(wrong_guesses))
             if check_lose(wrong_guesses):
                 print("Game over! The word was:", word)
                 break
