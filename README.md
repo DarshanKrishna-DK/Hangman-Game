@@ -17,7 +17,7 @@ Hangman is a popular word guessing game where players try to guess a hidden word
 1. Clone the Repository:
 `git clone https://github.com/your-username/hangman`
 
-2. Run the Game: Navigate to the cloned directory and execute the [Haangman file](hangman.py).
+2. Run the Game: Navigate to the cloned directory and execute the [Hangman file](hangman.py).
 
 ## Improvements:
 
