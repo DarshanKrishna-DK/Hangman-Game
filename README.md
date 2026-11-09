@@ -1,4 +1,9 @@
-# Hangman: A classic word guessing game implemented in Python.
+<h1 align="center">Hangman</h1>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-2563EB?style=for-the-badge" alt="Python" />
+  <img src="https://img.shields.io/badge/Word%20Game-7C3AED?style=for-the-badge" alt="Word Game" />
+</p>
 
    
 ## Description:
